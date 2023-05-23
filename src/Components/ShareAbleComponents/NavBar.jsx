@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import cartIcon from "../assets/icon/shopCart.png";
-import profile from "../assets/others/profile.png";
+import cartIcon from "../../assets/icon/shopCart.png";
+import profile from "../../assets/others/profile.png";
 
 const NavBar = () => {
   return (
