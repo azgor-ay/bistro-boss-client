@@ -8,9 +8,38 @@ footer {
     font-family: 'Inter', sans-serif;
 }
 
-.logo{
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.logo {
     font-family: 'Cinzel', serif;
 }
-.crinzel{
+
+.crinzel {
     font-family: 'Cinzel', serif;
+}
+
+.active {
+    @apply text-primary font-bold text-sm
+}
+
+.tabs-container {
+    @apply font-semibold p-12
+}
+
+.categories {
+    @apply flex justify-center items-center
+}
+
+.react-tabs__tab {
+    @apply mx-4 text-black outline-none uppercase
+}
+
+.react-tabs__tab--disabled {
+    @apply mx-4 text-black uppercase
+}
+
+.react-tabs__tab--selected {
+    @apply mx-4 text-primary font-semibold border-b-4 border-primary uppercase
 }

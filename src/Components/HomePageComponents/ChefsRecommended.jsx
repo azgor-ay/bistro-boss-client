@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectionTitle from "../ShareAbleComponents/SectionTitle";
-import RecommendedCard from "../ShareAbleComponents/RecommendedCard";
 import PrimaryButton from "../ShareAbleComponents/PrimaryButton";
+import DishCard from "../ShareAbleComponents/DishCard";
 
 const ChefsRecommended = () => {
   // const [showAll, setShowAll] = useState(false);
@@ -13,7 +13,7 @@ const ChefsRecommended = () => {
       .then((res) => res.json())
       .then((data) => {
         // setRecommended(data.filter((item) => item.category === "pizza"));
-        const sdf = (data.filter((item) => item.category === "salad"));
+        const sdf = data.filter((item) => item.category === "salad");
         const four = sdf.slice(0, 4);
         setFourOnly(four);
       });
@@ -26,9 +26,9 @@ const ChefsRecommended = () => {
         subHeading={"should try"}
       ></SectionTitle>
 
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-7 py-12">
         {fourOnly.map((dish) => (
-          <RecommendedCard key={dish._id} item={dish} />
+          <DishCard key={dish._id} item={dish} noPrice={true} />
         ))}
       </div>
 

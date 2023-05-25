@@ -5,7 +5,7 @@ import profile from "../../assets/others/profile.png";
 
 const NavBar = () => {
   return (
-    <nav className="navbar fixed max-w-screen-lg px-12 bg-black bg-opacity-40 text-white z-30">
+    <nav className="navbar fixed px-12 bg-black bg-opacity-40 text-white z-30">
       <div className="navbar-start">
         {/* Mobile Nav */}
         <div className="dropdown">
@@ -71,21 +71,54 @@ const NavBar = () => {
       <div className="navbar-end">
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 flex items-center justify-between gap-5 uppercase font-semibold text-sm">
-            <NavLink>home</NavLink>
-            <NavLink>contact us</NavLink>
-            <NavLink>dashboard</NavLink>
-            <NavLink>our menu</NavLink>
-            <NavLink>our shop</NavLink>
-            <NavLink>
+            <NavLink
+              to={""}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              home
+            </NavLink>
+            <NavLink
+              to={""}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              contact us
+            </NavLink>
+            <NavLink
+              to={""}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              dashboard
+            </NavLink>
+            <NavLink
+              to={"/menu"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              our menu
+            </NavLink>
+            <NavLink
+              to={"/orderFoods/salad"}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Order Foods
+            </NavLink>
+            <NavLink
+              to={""}
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <img className="w-12" src={cartIcon} alt="" />
             </NavLink>
-            <NavLink></NavLink>
+            <NavLink to={""}></NavLink>
           </ul>
         </div>
+        <Link to={"/login"}>
+          <button className="uppercase font-bold btn btn-primary btn-sm">
+            Login
+          </button>
+        </Link>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 border-2 rounded-full">
-              <img src={profile} className=""/>
+              <img src={profile} className="" />
             </div>
           </label>
           <ul
